@@ -53,7 +53,7 @@ for question in questions:
         print(f"{letter}. {choice}")
     print()
     user_answer = input('Your answer: ')
-    if user_answer.upper() not in question['choices']:
+    while user_answer.upper() not in question['choices']:
         user_answer = input(f'You gave an invalid answer please choose from the following options: {", ".join([option for option in question["choices"]])} : ')
     if user_answer.upper() == question['answer']:
         print('Correct!')
