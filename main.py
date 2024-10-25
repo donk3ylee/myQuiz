@@ -64,9 +64,9 @@ for question in questions:
 percentage = 100 / len(questions) * score
 if percentage < 30:
     effort = 'poor'
-elif percentage > 30.1 and percentage < 70:
+elif percentage >= 30 and percentage < 70:
     effort = 'moderate'
-elif percentage > 70.1:
+elif percentage >= 70:
     effort = 'good'
 
 print(f'The quiz has ended you got {score} out of {len(questions)} answers correct.')
