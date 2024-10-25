@@ -51,6 +51,7 @@ for question in questions:
     print(question['challenge'])
     for letter, choice in question['choices'].items():
         print(f"{letter}. {choice}")
+    print()
     user_answer = input('Your answer: ')
     if user_answer.upper() not in question['choices']:
         user_answer = input(f'You gave an invalid answer please choose from the following options: {", ".join([option for option in question["choices"]])} : ')
@@ -58,6 +59,7 @@ for question in questions:
         print('Correct!')
         score += 1
     else:
+        print()
         print(f'Sorry, the correct answer is: {question["answer"]}. {question["choices"][question["answer"]]}.')
     print()
 
